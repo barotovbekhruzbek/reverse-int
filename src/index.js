@@ -1,8 +1,19 @@
 module.exports = function reverse (n) {
-   let reversedNum = 0;
- while (n > 0) {
-     reversedNum = reversedNum * 10 + (n % 10);
-     n = Math.floor(n / 10);
- }
- return reversedNum;
+  
+    let reversedNum = 0;
+    let absNum = Math.abs(n); // Convert to positive number
+    while (absNum > 0) {
+        reversedNum = (reversedNum * 10) + (absNum % 10);
+        absNum = Math.floor(absNum / 10);
+    }
+    return n < 0 ? -reversedNum : reversedNum;
 }
+
+
+
+  
+  
+
+  
+
+
